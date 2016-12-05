@@ -167,12 +167,11 @@ The second day (Nov 30th) started with Andy Jassy's keynote
 <li>AWS Snowball Edge - new version of Snowball (PB scale data transport) at 2:12:20 </li>
 <li>AWS Snowmobile to move Exabyte of Data (100 PB container) at 2:17:50 </li>
 
-<p>
+<p></p>
 Followups - 
 
-<p></p>
 Check out Presto, QuickSight, Kinesis, EMR, MxNet (AI investment).  
-</p>
+<p></p>
 
 Next session - Deep Dive on Amazon RDS: 
 
@@ -182,7 +181,20 @@ Next session - Deep Dive on Amazon RDS:
 
 <p></p>
 
+Highlights: 
 
+<li>Reminder that RDS means OS cannot be accessed / parameters modified </li>
+<li>Size limits (4 TB SQL Server, 6TB MySQL, Oracle, PG, 64TB Aurora</li>
+<li>Aurora now PG compatible (in addition to being MySQL compatible) </li>
+<li>Security and encryption (networking, IAM, all engines support SSL encryption on the fly; also various mechanisms for encryption at res, also KMS)</li>
+<li>Also various certs (ISO, Fedramp, HIPAA, PCI for DB specifically)</li>
+<li>Useful tips on KMS with RDS</li>
+<li>Metrics and Monitoring (CloudWatch, plus also Enhanced Monitoring which provides additional 50 OS level metrics) </li>
+<li>Also new is Performance Insights for RDS (identifies perf bottlenecks - top SQL, etc) - to be rolled out in 2017</li>
+<li>High Availability - Standby replicas in multi AZ deployments, and DNS failover at 24:30 </li>
+<li>Read replicas to bring data closer to users and speed up recovery </li>
+<li>Aurora has some advantages - described at 27:50 </li>
+<li>Scaling RDS - at 30:50 </li>
 
 <h3>
 
