@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Other by hpebigdatasolutions</title>
+  </head>
+
+  <body ccID="789">
+    <header ccID="801">
+      <div ccID="817" class="inner">
+        <h1 ccID="846">AWS Reinvent 2016 Notes</h1>
+        <h2 ccID="888"></h2>
+        <a ccID="907" href="https://github.com/hpebigdatasolutions/other" class="button"><small ccID="977">View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div ccID="1055" id="content-wrapper">
+      <div ccID="1089" class="inner clearfix">
+        <section ccID="1127" id="main-content">
+          <h3 ccID="1166">
+<a ccID="1172" id="links" class="anchor" href="#links" aria-hidden="true"><span ccID="1234" aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h3>
+
+<p ccID="1316">
+Overall, the conference was huge - number of attendees, sessions, new feature announcements, impressions, and so on. 
+Obviously, there was a lot of koolaid, designed to pull one into the AWS fold. But at the same time it was impressive to see the decidedly educational and cost saving angle of many of the sessions. 
+</p>
+<p ccID="1646"> 
+This is an attempt to consolidate notes and impressions (including useful external links) from the conference. 
+</p> 
+
+<h3 ccID="1774">
+Day 1 
+</h3>
+
+<p ccID="1797">
+Well, officially the Day 1 was on Monday, but Vijay, Rob and I arrived in Las Vegas on Mon evening, so for us this was really Tuesday. 
+</p>
+
+<p ccID="1947">
+After the registration and breakfast (an impressive coordination of caterers serving 10,000s of attendees), my first session was "Leading Enterprise Innovation at Startup Speed", presented by Eric Tachibana (AWS Prof Services APAC area manager).  
+</p>
+
+<p ccID="2209">
+Recording of the session - 
+</p> 
+
+<iframe ccID="2252" width="560" height="315" src="https://www.youtube.com/embed/v5fL_pNMTvM" frameborder="0" allowfullscreen></iframe>
+
+<p ccID="2378"></p>
+
+<p ccID="2389"> 
+What I liked about this session was that it related to various quality and process improvement movements of the past (Toyota, Six Sigma), and discussed lean startups and lean enterprises of the future. I recommend that people managers and leaders listen to this.  
+</p>
+
+<p ccID="2669">
+I have more detailed notes of this, but the key points of accepting that you don't know what the customer wants if you are truly innovating, testing and measuring smart, and iterating at speed sounded very compelling. 
+</p>
+
+<p ccID="2902">
+Followups - check out the <a ccID="2933" href="https://www.amazon.com/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898">Lean Startup book</a> 
+and the <a ccID="3061" href="https://www.amazon.com/Lean-Analytics-Better-Startup-Faster/dp/1449335675"> Lean Analytics book. </a> 
+</p>
+
+Meanwhile, Vijay and Rob were at the AWS Partner Keynote, which was reportedly also very good 
+
+<p ccID="3280"></p>
+
+<iframe ccID="3291" width="560" height="315" src="https://www.youtube.com/embed/CyNt2lPOEoY" frameborder="0" allowfullscreen></iframe>
+
+<p ccID="3417"></p>
+<p ccID="3426">
+Check out 41:30, then 48:35, then 56:26 - very neat insights from James Hamilton, AWS Distinguished Engineer. 
+</p>
+
+<p ccID="3551"></p>
+My next session was Tips for Building Successful Solutions with AWS Marketplace and AWS Quick Start - 
+<p ccID="3664"></p>
+
+<iframe ccID="3675" width="560" height="315" src="https://www.youtube.com/embed/yUHPK8Ly-Pc" frameborder="0" allowfullscreen></iframe>
+
+<p ccID="3801"></p>
+
+<p ccID="3812">
+For me, this was somewhat underwhelming. I was interested in this topic as I wanted to know more about how our solutions could be sold through AWS Marketplace (see <a ccID="3981" href="https://aws.amazon.com/blogs/aws/new-saas-subscriptions-on-aws-marketplace/">here</a> 
+for some recent developments in this space, including Druva publishing their solution). 
+Unfortunately the session was somewhat too basic and plagued with autoadvancing slides. Still, some useful information. 
+</p>
+
+After lunch, it was on to Getting the Most Bang for Your Buck with EC2 
+
+<p ccID="4373"></p>
+
+<iframe ccID="4384" width="560" height="315" src="https://www.youtube.com/embed/VyfKY6vM8JI" frameborder="0" allowfullscreen></iframe> 
+
+<p ccID="4511"></p>
+
+<p ccID="4522">
+Though we are already using the reserved instances in our AWS environments, this session had good information on how to combine these with the spot instances, 
+and various usage patterns depending on use cases. 
+</p>
+
+<p ccID="4749">
+Takeaways / followups - 
+<li ccID="4780">Use all 3 types - on demand, reserved, spot</li>
+<li ccID="4834">Measure, monitor, improve</li>
+<li ccID="4870">Invest in good tagging schemes to understand usage, pricing, etc</li>
+<li ccID="4945">Investigate using spot instances for Jenkins (Spot3)</li>
+<li ccID="5008">Look at Lyft's Jenkins Docker build system (using spot instances)</li>
+<li ccID="5084">Even DBs could be built dynamically for eg daily reporting and use spot instances</li>
+<li ccID="5176">(Important) Shut down environments when they are not used to save!</li>
+<li ccID="5253">Investigate <a ccID="5269" href="https://aws.amazon.com/blogs/aws/ec2-reserved-instance-update-convertible-ris-and-regional-benefit/">convertible reserved instances</a></li>
+</p>
+
+<p ccID="5428">
+My final session of the day was Chalk Talk: Ingesting, Storing, Processing and Extracting Value from Real-Time Big Data. 
+</p>
+
+<p ccID="5564">
+There is no recording of this session, but basically it was a dive into using various AWS components (Kinesis, Machine Learning, etc) to solve the use case of tracking 
+airplanes, identifying suspicious flights, and detecting possible collisions between airplanes (using radar data). 
+</p>
+
+<h3 ccID="5864">
+Day 2 
+</h3>
+
+<p ccID="5887"></p>
+<p ccID="5896">
+The second day (Nov 30th) started with Andy Jassy's keynote 
+</p>
+
+<p ccID="5971"></p>
+
+<iframe ccID="5982" width="560" height="315" src="https://www.youtube.com/embed/8RrbUyw9uSg" frameborder="0" allowfullscreen></iframe>
+
+<p ccID="6108"></p>
+
+<p ccID="6119">Some key listening points - </p>
+
+<li ccID="6158">ENEL story at 13:05 </li>
+<li ccID="6189">New EC2 instance types at 26:25 </li>
+<li ccID="6232">Preview of Elastic GPUs (attachable to EC2 instances) 30:35</li>
+<li ccID="6302">Amazon LightSail (Virtual Private Servers made easy) at 33:20 </li>
+<li ccID="6375">Hardware Acceleration and FPGA Instances 35:30 </li>
+<li ccID="6433">Dig at Larry Ellison at 39:10 (watch the slides for popup pics)</li>
+<li ccID="6507">Overall AWS Analytics picture at 40:34</li>
+<li ccID="6556">Amazon Athena (Simple Analytics against S3, complements Redshift and EMR) at 43:30</li>
+<li ccID="6649">New AI Services (Rekognition for image recognition, Polly for text to speech, Lexa for natural language understanding) at 51:05</li>
+<li ccID="6787">WorkDay production environments to be run on AWS (Aneel Bhusri) at 1:08:50</li>
+<li ccID="6872"> </li>
+
+<p ccID="6886">
+Check out Presto, QuickSight, Kinesis, EMR, MxNet (AI investment) 
+</p>
+<h3 ccID="6965">
+
+<a ccID="6973" id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span ccID="7073" aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p ccID="7171"><a ccID="7174" href="https://github.com/gundarskokts" class="user-mention">@gundarskokts</a> </p>
+        </section>
+
+        <aside ccID="7291" id="sidebar">
+          <a ccID="7323" href="https://github.com/hpebigdatasolutions/other/zipball/master" class="button">
+            <small ccID="7422">Download</small>
+            .zip file
+          </a>
+          <a ccID="7496" href="https://github.com/hpebigdatasolutions/other/tarball/master" class="button">
+            <small ccID="7595">Download</small>
+            .tar.gz file
+          </a>
+
+          <p ccID="7674" class="repo-owner"><a ccID="7696" href="https://github.com/hpebigdatasolutions/other"></a> is maintained by <a ccID="7773" href="https://github.com/hpebigdatasolutions">hpebigdatasolutions</a>.</p>
+
+          <p ccID="7864">This page was generated by <a ccID="7894" href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a ccID="7975" href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
