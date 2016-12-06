@@ -239,7 +239,6 @@ Interesting tidbits, listening points, followups -
 <li>Offload traffic to Amazon Cloudfront / S3 (caching in front of app) at 43:30 </li>
 <li>Leveraging existing services, and use existing AWS services if you can </li>
 <li>47:00 - Picking the right tool for the job (this is a nice small reference architecture that is kind of applicable to us) </li>
-<li></li>
 
 <p></p>
 
@@ -264,6 +263,8 @@ I did not attend this one though I wanted to - Cloud Monitoring: Understanding &
 
 And final session for the day - Optimizing SaaS Solutions for AWS. 
 
+<p></p>
+
 <p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/D-8fTCz8_Yo" frameborder="0" allowfullscreen></iframe>
@@ -282,7 +283,19 @@ and (more generally) looking at multi tenant implementation models.
 <li>17:28 - tenant optimization takeaways </li>
 <li>Data partitioning and storage optimization at 20:10 </li>
 <li>Distributions can be different across tenants, as well as within the tenant (diff tables, etc anomalies) </li> 
-<li> </li>
+<li>Hot key bottlenecks and sharding a shard at 23:00</li>
+<li>Need for new shard - what metrics? </li>
+<li>Key takeaways for tenant data distribution at 28:35</li>
+<li>Tenant policies at 30:00 (inc tier or workflow driven optimizations) </li>
+<li>36:10 - Key takeaways on policies </li>
+<li>SaaS load optimization - just enough infra, minimize costs, what does idle look like, cost per tenant </li>
+<li>How "big" should my services be at 39:40 - difficult in multi tenant environment </li>
+<li>Breaking up the services to the right granularity </li>
+<li>Lambda / serverless makes it easy at 41:30 </li>
+<li>Takeaways for load optimization at 47:40 </li>
+<li>Importance of metrics (inc what is important for your domain!) at 49:05 </li> 
+<li>Optimization tenets at 50:50</li>
+
 
 <h3>
 
