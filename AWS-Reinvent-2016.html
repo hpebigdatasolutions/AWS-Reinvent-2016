@@ -179,9 +179,7 @@ Next session - Deep Dive on Amazon RDS:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pPLPzPYY5uU" frameborder="0" allowfullscreen></iframe> 
 
-<p></p>
-
-Highlights: 
+<p>Highlights: </p>
 
 <li>Reminder that RDS means OS cannot be accessed / parameters modified </li>
 <li>Size limits (4 TB SQL Server, 6TB MySQL, Oracle, PG, 64TB Aurora</li>
@@ -211,7 +209,7 @@ Next session - Running Lean Architectures: How to Optimize for Cost Efficiency
 <p></p>
 
 <p>
-Followups - 
+Interesting tidbits, listening points, followups - 
 </p>
 
 <li>awstcocalculator.com</li>
@@ -230,11 +228,61 @@ Followups -
 <li>Container service for smaller tasks (through consolidation) </li>
 <li>Beyond that, can use Lambda (especially when 40%+ idle)</li>
 <li>Caching to optimize DB (eg via Redis) </li>
-<li>33:40 Negative caching (highest bid? but what if there is NO bid?) </li>
-<li>Synchronous writing to cache </li>
-<li>Using lambda for cache updates (uncoupled invalidation) </li>
-<li> </li>
+<li>33:40 Negative caching (highest bid? but what if there is NO bid?) - dramatic increase in hit ratio for this use case</li>
+<li>Time to live (TTL) vs cache in sync all the time</li>
+<li>Synchronous writing to cache (in addition to DB) </li>
+<li>Using lambda for cache updates (uncoupled invalidation for latency sensitive writes) </li>
+<li>Can also use stored procedures calling lambda functions in Aurora if not using DynamoDB </li>
+<li>DynamoDB optimization at 40:30 </li>
+<li>SQS buffering requests and Shazam experience </li>
+<li>Dynamic DynamoDB - open source script adjusting / scaling DynamoDB </li>
+<li>Offload traffic to Amazon Cloudfront / S3 (caching in front of app) at 43:30 </li>
+<li>Leveraging existing services, and use existing AWS services if you can </li>
+<li>47:00 - Picking the right tool for the job (this is a nice small reference architecture that is kind of applicable to us) </li>
+<li></li>
 
+<p></p>
+
+I did not attend this one though I wanted to - Cloud Monitoring: Understanding & Troubleshooting Dynamic Apps (ARC303). 
+
+<p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_-rqAbBmE6o" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<li>Cloud as a better data center (mostly impacting ops) vs dynamic applications </li>
+<li>Monitoring the former is the same as monitoring any other data center </li>
+<li>Dynamic tool for dynamic apps approach to cloud is different </li>
+<li>10:00 Dynamic cloud technologies / examples </li>
+<li>Monitor the lifecycle of cloud components, not just the components themselves </li>
+<li>Now the impact shifts to dev (from ops) as dev controls the architecture / dynamic nature </li>
+<li>EC2 -> container -> lambda (the ultimate dynamic case) </li>
+<li>Lambda use cases </li>
+<li>Monitoring lambda = more like infrastructure monitoring </li>
+<li>Bottom line - monitoring is changing! Was OK to monitor the server, but not any more! Need the entire stack, up and down monitoring now! </li>
+
+<p></p>
+
+And final session for the day - Optimizing SaaS Solutions for AWS. 
+
+<p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D-8fTCz8_Yo" frameborder="0" allowfullscreen></iframe>
+
+</p>
+
+This one was interesting as most of these principles go beyond the specific AWS implementation. Relevant to Identity team as well as teams interacting with Control Center 
+and (more generally) looking at multi tenant implementation models. 
+
+<p></p>
+
+<li>Optimization patterns / categories at 2:00 </li>
+<li>Tenant experience optimization at 6:00 - idle vs active vs busy tenants, dynamic models; tenant optimized caching </li>
+<li>Identifying a busy tenant at 12:30 - domain specific question! </li>
+<li>Tenant cache sizing at 14:55 </li>
+<li>17:28 - tenant optimization takeaways </li>
+<li>Data partitioning and storage optimization at 20:10 </li>
+<li>Distributions can be different across tenants, as well as within the tenant (diff tables, etc anomalies) </li> 
+<li> </li>
 
 <h3>
 
